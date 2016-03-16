@@ -22,5 +22,4 @@ To see results point your browser to http://localhost:8080/ +
 You should see what is shown in the iFrame below. +
 
 
-
-pass:[<iframe src="http://yencarnacion.github.io/eddystone-url-calculator" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"> </iframe>"]
+You can test it out at http://yencarnacion.github.io/eddystone-url-calculator[http://yencarnacion.github.io/eddystone-url-calculator]
