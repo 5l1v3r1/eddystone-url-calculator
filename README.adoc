@@ -3,7 +3,7 @@ This a javascript single page app that generates the Linux commands for
 broadcasting a URL as a Eddystone URL beacon.
 
 === License
-This work (tradepr-proj) is licensed by
+This work (eddystone-url-calculator) is licensed by
 Yamir Encarnación <yencarnacion@webninjapr.com>
 under a BSD 2-Clause License.  See LICENSE.txt
 
