@@ -19,7 +19,6 @@ See DEPENDENCIES.adoc.
  $ npm start
 ----
 To see results point your browser to http://localhost:8080/ +
-You should see what is shown in the iFrame below. +
 
 
 You can test it out at http://yencarnacion.github.io/eddystone-url-calculator[http://yencarnacion.github.io/eddystone-url-calculator]
