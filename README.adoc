@@ -1,0 +1,21 @@
+== eddystone-url-calculator
+This a javascript single page app that generates the Linux commands for
+broadcasting a URL as a Eddystone URL beacon.
+
+=== License
+This work (tradepr-proj) is licensed by
+Yamir Encarnación <yencarnacion@webninjapr.com>
+under a BSD 2-Clause License.  See LICENSE.txt
+
+=== What is needed to run the program
+See DEPENDENCIES.adoc.
+
+=== How to run
+.To get this project working, perform the minimum steps:
+----
+ $ bower install
+ $ npm install
+ $ gulp scripts
+ $ npm start
+----
+To see results point your browser to http://localhost:8080/

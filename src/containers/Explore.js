@@ -7,8 +7,8 @@ export default class Explore extends Component {
      this.handleChange = this.handleChange.bind(this)
      this.handleSubmit = this.handleSubmit.bind(this)
      this.state = {
-    url: ''
-  }
+        url: ''
+     }
 
   }
 
@@ -21,16 +21,16 @@ export default class Explore extends Component {
   handleSubmit(e){
     if(e.keyCode === 13){
       this.props.process(this.state.url);
-      this.setState({
-        url: ''
-      });
+//      this.setState({
+//        url: ''
+//      });
     }
   }
 
   render(){
     return (
       <div>
-        <input type="text" className="form-control" value={this.state.url} placeholder="http://webgazer.org" onKeyDown={this.handleSubmit} onChange={this.handleChange} />
+        <input type="text" value={this.state.url} placeholder="http://webgazer.org" onKeyDown={this.handleSubmit} onChange={this.handleChange} />
       </div>
     )
   }

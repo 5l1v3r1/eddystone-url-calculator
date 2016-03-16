@@ -1,0 +1,15 @@
+{
+  "name": "eddystone",
+  "description": "",
+  "main": "eddystone-min.js",
+  "authors": [
+    "Yamir Encarnacion <yencarnacion@webninjapr.com>"
+  ],
+  "license": "BSD 2-Clause License",
+  "homepage": "https://github.com/yencarnacion/eddystone-url-calculator",
+  "moduleType": [],
+  "private": true,
+  "dependencies": {
+    "foundation": "^5.5.3"
+  }
+}

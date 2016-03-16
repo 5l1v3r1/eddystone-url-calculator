@@ -1,0 +1,10 @@
+== eddystone-url-calculator Project Dependencies
+
+=== What you need to run 
+.Download and install the following:
+* install node.js from https://nodejs.org/en/download/
+
+.Install Gulp and Bower
+----
+$ sudo npm install -g bower gulp
+----

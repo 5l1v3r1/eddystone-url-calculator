@@ -151,34 +151,43 @@ export default class Command extends Component {
     base.push("10");     //14
     base.push("00");     //15
    
-    var retval = base.concat(this.processUrl(this.props.url));
+
+    var processedUrl = this.processUrl(this.props.url);
+    var retval = base.concat(processedUrl);
     retval[2] = this.leadingZero(Number(retval.length - 3).toString(16));
     retval[10] = this.leadingZero(Number(retval.length - 11).toString(16));
 
-    var retstring = "";
-    if(retval.length <= 34){
+    var retcomp = <div />
+    if(processedUrl.length === 0) {
+       commandstring = "Enter a URL above."; 
+
+       retcomp = <div className="callout alert">{commandstring}</div>;
+    } else if(retval.length <= 34){
+       var commandstring = ""
        for(var j=retval.length; j<34; j++){
           retval.push("00");     
        }
        for(var i = 0; i< retval.length ; i++){
-          retstring = retstring + retval[i] +" ";
+          commandstring = commandstring + retval[i] +" ";
        }
+       commandstring = commandstring.trim();
+       retcomp = (
+              <div className="callout secondary">
+                 <h5>Your commands for "{this.props.url}" are:</h5>
+                 <p>$ sudo hciconfig hci0 up</p>
+                 <p>$ sudo hciconfig hci0 leadv 3</p>
+                 <p>$ sudo hcitool -i hci0 cmd {commandstring}</p>
+              </div>
+       );
     } else {
-       var toolong = (retval.length - 34 + 1)
-       retstring = "Your URL is too long by " + String(toolong) + ((toolong===1) ? " byte" : " bytes"); 
+       var toolong = (retval.length - 34 )
+       commandstring = "Your URL is too long by " + String(toolong) + ((toolong===1) ? " byte" : " bytes"); 
+
+       retcomp = <div className="callout alert">{commandstring}</div>;
     }
 
-    retstring = retstring.trim();
-
     return (
-      <div>
-         <p>Your commands for "{this.props.url}" are:</p>
-         <p>$ sudo hciconfig hci0 up</p>
-         <p>$ sudo hciconfig hci0 leadv 3</p>
-         <p>
-            $ sudo hcitool -i hci0 cmd {retstring}
-         </p>
-      </div>
+       retcomp
     )
    }
 }
