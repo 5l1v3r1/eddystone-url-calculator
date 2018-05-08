@@ -22,3 +22,6 @@ To see results point your browser to http://localhost:8080/ +
 
 
 You can test it out at http://yencarnacion.github.io/eddystone-url-calculator[http://yencarnacion.github.io/eddystone-url-calculator]
+
+
+You can read a blog post related to this calculator at http://webgazer.org/update/tutorial/2016/03/16/raspberrypi-eddystone-url.html[http://webgazer.org/update/tutorial/2016/03/16/raspberrypi-eddystone-url.html]
